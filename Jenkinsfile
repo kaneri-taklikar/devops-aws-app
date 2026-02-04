@@ -1,3 +1,4 @@
+
 pipeline {
     agent any
 
@@ -8,13 +9,6 @@ pipeline {
     }
 
     stages {
-
-        stage('Checkout Code') {
-            steps {
-                git branch: 'main',
-                    url: 'https://github.com/tera-username/devops-aws-pipeline.git'
-            }
-        }
 
         stage('Build Docker Image') {
             steps {
@@ -41,3 +35,4 @@ pipeline {
         }
     }
 }
+   
